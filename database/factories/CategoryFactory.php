@@ -16,8 +16,13 @@ class CategoryFactory extends Factory
      */
     public function definition(): array
     {
+
+        $name =  $this->faker->randomElement([
+            'ACCESIBILITY', 'BEST_PRACTICES', 'PERFORMANCE', 'PWA', 'SEO'
+        ]);
+
         return [
-            //
+            'name' => $name,
         ];
     }
 }

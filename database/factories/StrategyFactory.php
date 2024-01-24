@@ -16,8 +16,11 @@ class StrategyFactory extends Factory
      */
     public function definition(): array
     {
+
+        $name = $this->faker->randomElement(['DESKTOP', 'MOBILE']);
+
         return [
-            //
+            'name' => $name,
         ];
     }
 }
