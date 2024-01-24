@@ -12,7 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('categories', function (Blueprint $table) {
+            //id, name (crear un seeder con los valores iniciales: ACCESSIBILITY,BEST_PRACTICES, PERFORMANCE, PWA, SEO)
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
