@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('metric_history_runs', function (Blueprint $table) {
             //id, url, accesibility_metric, pwa_metric, performance_metric, seo_metric, best_practices_metric (con sus respectivos created and updated dates)
             $table->id();
+            $table->unsignedBigInteger('strategy_id');
+            $table->foreign('strategy_id')->references('id')->on('strategies');
             $table->string('url');
             $table->float('accesibility_metric');
             $table->float('pwa_metric');
